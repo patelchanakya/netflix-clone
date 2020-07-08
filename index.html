@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix Clone - Watch TV Shows Online, Watch Movies Online</title>
+  <script src="https://kit.fontawesome.com/5da1f90c8f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <header class="landing">
+    <div class="landing-top">
+      <img src="img/logo.png" alt="Netflix">
+      <a href="#" class="btn btn-round">Sign In</a>
+    </div>
+    <div class="landing-content">
+      <h1>Thousands of TV shows & movies. Entertainment guaranteed.</h1>
+      <h2>You'll love Netflix! If you don't, cancel within 7 days for a refund.</h2>
+      <form class="form-style">
+
+        <div class="form-master-header">
+          <div id="header-form" class="form-content">
+            <input type="text" id="fname" name="firstname" placeholder="Email address" size="50">
+          </div>
+          <div>
+            <a href="#" class="btn btn-form-header">
+              Get Started <i class="fa fa-chevron-right btn--icon"></i>
+            </a>
+          </div>
+        </div>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+      </form>
+
+    </div>
+  </header>
+  <section class="panels">
+    <div class="panel-all">
+      <div id="panel-1" class="section-panel">
+        <div id="panel-1-text">
+          <h3 class="text-large">Enjoy on your TV.</h3>
+          <h4 class="text-small">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+          </h4>
+        </div>
+        <div id="panel-1-image">
+          <img src="./img/content-2.png" alt="TV">
+        </div>
+      </div>
+    </div>
+    <div class="panel-all">
+      <div id="panel-2" class="section-panel">
+        <div id="panel-2-image">
+          <img src="./img/content-6.png" alt="Phone">
+        </div>
+        <div id="panel-2-text">
+          <h3 class="text-large">Download your shows to watch offline.</h3>
+          <h4 class="text-small">Save your favorites easily and always have something to watch.</h4>
+        </div>
+      </div>
+    </div>
+    <div class="panel-all">
+      <div id="panel-3" class="section-panel">
+        <div id="panel-3-text">
+          <h3 class="text-large">Watch everywhere.</h3>
+          <h4 class="text-small">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without
+            paying more.</h4>
+        </div>
+        <div id="panel-3-image">
+          <img src="./img/content-3.png" alt="Watch">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div id="faq-page">
+      <h4 class="faq-header">Frequently Asked Questions</h4>
+
+      <ul class="faq-list">
+        <li class="faq-list-item">
+          <button class="list-question-1 faq-btn" onclick="showDiv()">What is Netflix?
+            <i class="fa fa-plus button-icon custom-icon1"></i>
+          </button>
+          <div id="list-content-1" class="faq-list-content">
+            <span>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+              documentaries, and more on thousands of internet-connected devices.</span>
+            <br>
+            <br>
+            <span>You can watch as much as you want, whenever you want without a single commercial – all for one low
+              monthly price. There's always something new to discover and new TV shows and movies are added every
+              week!</span>
+          </div>
+        </li>
+        <li class="faq-list-item">
+          <button class="list-question-2 faq-btn" onclick="showDivTwo()">How much does Netflix cost?
+            <i class="fa fa-plus button-icon custom-icon2"></i>
+          </button>
+          <div id="list-content-2" class="faq-list-content">
+            <span>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed
+              monthly fee. Plans range from $9.99 to $16.99 a month. No extra costs, no contracts.</span>
+          </div>
+        </li>
+        <li class="faq-list-item">
+          <button class="list-question-3 faq-btn" onclick="showDivThree()">Where can I watch?
+            <i class="fa fa-plus button-icon custom-icon3"></i>
+          </button>
+          <div id="list-content-3" class="faq-list-content">
+            <span>Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch
+              instantly on the web at netflix.com from your personal computer or on any internet-connected device that
+              offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game
+              consoles.</span>
+            <br>
+            <br>
+            <span>You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to
+              watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</span>
+          </div>
+        </li>
+        <li class="faq-list-item">
+          <button class="list-question-4 faq-btn" onclick="showDivFour()">How do I cancel?
+            <i class="fa fa-plus button-icon custom-icon4"></i>
+          </button>
+          <div id="list-content-4" class="faq-list-content">
+            <span>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your
+              account online in two clicks. There are no cancellation fees – start or stop your account anytime.</span>
+          </div>
+        </li>
+        <li class="faq-list-item">
+          <button class="list-question-5 faq-btn" onclick="showDivFive()">What can I watch on Netflix?
+            <i class="fa fa-plus button-icon custom-icon5"></i>
+          </button>
+          <div id="list-content-5" class="faq-list-content">
+            <span>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+              Netflix originals, and more. Watch as much as you want, anytime you want.</span>
+          </div>
+        </li>
+      </ul>
+
+      <form class="form-style">
+
+        <div class="form-master">
+          <div class="form-content">
+            <input type="text" id="fname" name="firstname" placeholder="Email address" size="50">
+          </div>
+          <div>
+            <a href="#" class="btn btn-form">
+              Get Started <i class="fa fa-chevron-right btn--icon"></i>
+            </a>
+          </div>
+        </div>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Questions? Call 1-844-542-4813</p>
+    <div class="footer-list">
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Ways to Watch</a></li>
+        <li><a href="#">Corporate Information</a></li>
+        <li><a href="#">Netflix Originals</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Redeem Gift Cards</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Speed Test</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Buy Gift Cards</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+        <li><a href="#">Legal Notices</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

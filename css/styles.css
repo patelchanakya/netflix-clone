@@ -1,0 +1,415 @@
+/* resets everything to zero */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'helvetica', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: black;
+  color: #999; /* makes paragraph tag [and other body elements] the color gray */
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* takes out the underline from the links */
+}
+
+img {
+
+  max-width: 10vw;
+}
+
+.landing {
+  width: 100vw;
+  height: 46.5vw;
+  position: relative;
+  background: url('../img/background.jpg') no-repeat center center/cover;
+  border-bottom: 8px solid rgb(34, 34, 34);
+}
+
+/* use pseudo-elements for background effects*/
+.landing::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* z-index must be lower than other landing elements */ 
+  background: rgba(0, 0, 0, 0.52);
+  box-shadow: inset 120px 100px 250px #000000b0, inset -120px -100px 250px #000000ab;
+}
+
+.landing-top {
+  position: relative;
+  z-index: 2; /* the higher the z-index the closer it is to you */
+  height: 5vw;
+}
+
+.landing-top img {
+  width: 170vw;
+  position: absolute;
+  top: 28%;
+  left: 40px;
+  transform: translate(5%);
+}
+
+.landing-top a {
+  position: absolute;
+  z-index: 2;
+  top: 28%;
+  right: 40px;
+  transform: translate(-5%)
+}
+
+.landing-content {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  display: flex; /* this will put everything in a default row*/
+  flex-direction: column; /* change direction to column so that its stacked */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 7.7%;
+}
+
+.landing-content h1 {
+  font-weight: 650;
+  font-size: 3.2vw;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  margin: 0 36% 1% 36%;
+}
+
+.landing-content h2 {
+  font-weight: 210;
+  font-size: 1.3vw;
+  line-height: 1.35;
+  margin: 0 34% 1.5% 34%;
+}
+
+.landing-content p {
+  color: white;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 1.55;
+  margin: 1% 0 8% 0;
+}
+
+/* CSS PANELS */
+
+.panels .panel-all {
+  position: relative;
+  height: 25vw;
+  width: 100%;
+  border-bottom: 9px solid rgb(48, 46, 46);
+}
+
+.panels .panel-all .section-panel {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.text-small {
+  position: relative;
+  font-size: 1.3vw;
+  font-weight: 100;
+}
+
+.text-large {
+  font-weight: 550;
+  font-size: 2.5vw;
+  line-height: 1.1;
+  margin: 0 10% 3% 0%;
+}
+
+/* first panel */
+#panel-1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+#panel-1-text {
+  margin: 0 0 0 45%;
+}
+
+#panel-1-image img {
+  max-width: 40%;
+  margin: 0 0 0 10%;
+}
+
+/* second panel */
+#panel-2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+#panel-2-text {
+  margin: 0 36% 0 0;
+}
+
+#panel-2-image img {
+  max-width: 48%;
+  margin: 0 0 1% 45%;
+}
+
+/* third panel */
+#panel-3 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1%;
+  justify-content: center;
+  align-items: center;
+}
+
+#panel-3-text {
+  margin: 0 0 0 45%;
+}
+
+#panel-3-image img {
+  max-width: 65%;
+  margin: 0 0 0 1%;
+}
+
+/* button utilities */
+.btn {
+  display: inline-block;
+  background-color: #E50914;
+  color: white;
+  padding: 0.4rem 1.3rem;
+  font-size: 1vw;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
+  border-radius: 1.5px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-round {
+  border-radius: 4%;
+  font-size: 1vw;
+}
+
+.btn-xl {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5% 2% 0.5% 2%;
+}
+
+.btn-form {
+  padding: 5.6% 1% 4.9% 1%;
+  font-size: 1.5vw;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.btn-form-header {
+  padding: 8% 1% 7.4% 1%;
+  font-size: 1.2vw;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* FAQ css */
+
+/* section */
+.info {
+  padding: 5% 9% 1% 9%;
+  border-bottom: 9px solid rgb(48, 46, 46);
+}
+
+#faq-page .faq-header {
+  position: relative;
+  margin: 1% 15% 0% 15%;
+  font-weight: 600;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.faq-list {
+  margin: 2% 20% 2% 20%;
+  align-items: center;
+}
+
+.faq-list-item {
+  margin-bottom: 1%;
+}
+
+.faq-list-content {
+  display: inline-block;
+  width: 100%;
+  background-color: #302d2d;
+  color: white;
+  padding: 2% 4% 2% 5%;
+  font-size: 1.5vw;
+}
+
+#list-content-1 {
+  display: none;
+}
+
+#list-content-2 {
+  display: none;
+}
+
+#list-content-3 {
+  display: none;
+}
+
+#list-content-4 {
+  display: none;
+}
+
+#list-content-5 {
+  display: none;
+}
+
+.faq-btn {
+  display: inline-block;
+  width: 100%;
+  background-color: #302d2d;
+  color: white;
+  padding: 2% 0% 2% 0%;
+  font-size: 1.5vw;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
+}
+
+.custom-icon1 {
+  padding-left: 32vw;
+}
+
+.custom-icon2 {
+  padding-left: 23vw;
+}
+
+.custom-icon3 {
+  padding-left: 29.2vw;
+}
+
+.custom-icon4 {
+  padding-left: 31vw;
+}
+
+.custom-icon5 {
+  padding-left: 23.5vw;
+}
+
+/* form [get started btn] */
+
+.form-master {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1%;
+  margin: 0% 23% 1% 23%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-master-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1%;
+  margin: 0% 20% 1% 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgb(73, 73, 73);
+  border-radius: 1px;
+  resize: vertical;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.form-style p {
+  color: white;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 1.55;
+  margin: 1% 30% 3% 30%;
+}
+
+#header-form {
+  margin: 0;
+  width: 100%;
+}
+
+/* footer styles */
+.footer {
+  margin: 3vw 20vw 1vw 20vw;
+  overflow: auto;
+}
+
+.footer, .footer a {
+  color: #999;
+  font-size: 0.7vw;
+}
+
+.footer p {
+  margin-bottom: 2%;
+  font-size: 0.8vw;
+}
+
+.footer .footer-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.footer li {
+  line-height: 2;
+}
+
+@-o-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
